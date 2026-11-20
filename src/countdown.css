@@ -42,6 +42,66 @@ body {
   color: var(--ink);
 }
 
+.countdown-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.countdown-music {
+  position: fixed;
+  z-index: 5;
+  top: max(1rem, env(safe-area-inset-top));
+  left: max(1rem, env(safe-area-inset-left));
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  border: 1px solid rgb(255 250 246 / 0.24);
+  border-radius: var(--r-btn);
+  background: rgb(255 250 246 / 0.08);
+  color: var(--paper);
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.countdown-music:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+}
+
+.countdown-music:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.countdown-music__icon,
+.countdown-music svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.countdown-music__pause,
+.countdown-music[data-playing="true"] .countdown-music__play {
+  display: none;
+}
+
+.countdown-music[data-playing="true"] .countdown-music__pause {
+  display: block;
+}
+
 .countdown-page {
   position: relative;
   display: grid;
@@ -192,6 +252,11 @@ body {
 }
 
 @media (max-width: 639px) {
+  .countdown-music {
+    top: max(0.75rem, env(safe-area-inset-top));
+    left: max(0.75rem, env(safe-area-inset-left));
+  }
+
   .countdown-page {
     place-items: stretch;
   }

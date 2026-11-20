@@ -10,6 +10,10 @@ const days = document.querySelector<HTMLElement>('[data-countdown-days]');
 const hours = document.querySelector<HTMLElement>('[data-countdown-hours]');
 const minutes = document.querySelector<HTMLElement>('[data-countdown-minutes]');
 const seconds = document.querySelector<HTMLElement>('[data-countdown-seconds]');
+const music = document.querySelector<HTMLAudioElement>('#countdown-music');
+const musicToggle = document.querySelector<HTMLButtonElement>('[data-countdown-music-toggle]');
+const musicLabel = document.querySelector<HTMLElement>('[data-countdown-music-label]');
+const musicStatus = document.querySelector<HTMLElement>('[data-countdown-music-status]');
 
 const toPersianDigits = (value: number) => value
   .toString()
@@ -35,3 +39,47 @@ render();
 const countdownInterval = window.setInterval(() => {
   if (render() === 0) window.clearInterval(countdownInterval);
 }, SECOND);
+
+const renderMusicState = () => {
+  if (!music || !musicToggle || !musicLabel) return;
+  const playing = !music.paused && !music.ended;
+  musicToggle.dataset.playing = String(playing);
+  musicToggle.setAttribute('aria-pressed', String(playing));
+  musicToggle.setAttribute('aria-label', playing ? 'مکث آهنگ' : 'پخش آهنگ');
+  musicLabel.textContent = playing ? 'مکث آهنگ' : 'پخش آهنگ';
+};
+
+if (music && musicToggle) {
+  music.volume = 0.72;
+
+  music.addEventListener('play', () => {
+    if (musicStatus) musicStatus.textContent = 'آهنگ در حال پخش است.';
+    renderMusicState();
+  });
+
+  music.addEventListener('pause', renderMusicState);
+  music.addEventListener('ended', renderMusicState);
+  music.addEventListener('error', () => {
+    musicToggle.disabled = true;
+    if (musicLabel) musicLabel.textContent = 'آهنگ در دسترس نیست';
+    if (musicStatus) musicStatus.textContent = 'پخش آهنگ ممکن نیست.';
+  });
+
+  const toggleMusic = async () => {
+    if (!music.paused && !music.ended) {
+      music.pause();
+      return;
+    }
+
+    try {
+      await music.play();
+    } catch {
+      if (musicStatus) musicStatus.textContent = 'برای پخش آهنگ، دوباره دکمه را لمس کن.';
+      renderMusicState();
+    }
+  };
+
+  musicToggle.addEventListener('click', toggleMusic);
+  void music.play().catch(() => renderMusicState());
+  renderMusicState();
+}
