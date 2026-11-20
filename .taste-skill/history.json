@@ -1,0 +1,16 @@
+{
+  "moments": [
+    {
+      "id": "word-highlight",
+      "at": "2026-11-20T17:36:44.608Z",
+      "seed": "725af7bd"
+    }
+  ],
+  "palettes": [],
+  "types": [],
+  "dealt": [
+    "newsreader",
+    "schibsted",
+    "rethink"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+ "page": "dist/mahya-janam.html",
+ "url": null,
+ "root": "dist",
+ "kind": "service",
+ "category": "Persian digital love letter",
+ "primary": "play music",
+ "rounds": 3,
+ "start": "2026-11-20T17:36:44.535Z",
+ "by": "gate.mjs --start"
+}

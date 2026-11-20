@@ -1,0 +1,1525 @@
+{
+ "start": "2026-11-20T17:36:44.535Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-20T18:13:29.890Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 40,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-20T18:16:29.585Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 41,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-20T18:19:05.770Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 40,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "dist/mahya-janam.html",
+  "url": null,
+  "root": "dist",
+  "kind": "service",
+  "category": "Persian digital love letter",
+  "primary": "play music",
+  "rounds": 3,
+  "start": "2026-11-20T17:36:44.535Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "3638805c3e34c05e:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "3638805c3e34c05e",
+ "page": "dist/mahya-janam.html",
+ "found": {
+  "fails": [
+   {
+    "check": "nav",
+    "where": "(the first screen)",
+    "msg": "no nav bar across the top of the first screen (a header with the brand, the section links and the main action)",
+    "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav"
+    ],
+    "wheres": [
+     "(the first screen)"
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#letter \"چند خط از روزهای با تو\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#letter \"چند خط از روزهای با تو\""
+    ]
+   },
+   {
+    "check": "cta",
+    "where": "section#opening",
+    "msg": "the hero has no button (the nav's does not count)",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cta"
+    ],
+    "wheres": [
+     "section#opening"
+    ]
+   },
+   {
+    "check": "cta",
+    "where": "section#longing \"خواستنت تمنای هر رگ\"",
+    "msg": "the last section before the footer ends with no button",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cta"
+    ],
+    "wheres": [
+     "section#longing \"خواستنت تمنای هر رگ\""
+    ]
+   },
+   {
+    "check": "copy-headline",
+    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "msg": "\"«وایسته شد تمام من به تمام تو»\" does not name what is sold (persian digital love letter, persian, digital, love, from flags)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headline"
+    ],
+    "wheres": [
+     "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+    ]
+   },
+   {
+    "check": "copy-fact",
+    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "msg": "the first screen holds no number, price, date, place, platform or genre",
+    "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-fact"
+    ],
+    "wheres": [
+     "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+    ]
+   },
+   {
+    "check": "stagger",
+    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "msg": "3 rows start at 3 different left offsets (+0, +42, +140px)",
+    "fix": "start every row of the list on one left edge",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "stagger"
+    ],
+    "wheres": [
+     "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+    ]
+   },
+   {
+    "check": "stagger",
+    "where": "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\"",
+    "msg": "the 2 lines of this heading start at 789, 732px: a headline broken across columns, read in a zigzag",
+    "fix": "start every row of the list on one left edge",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "stagger"
+    ],
+    "wheres": [
+     "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\""
+    ]
+   },
+   {
+    "check": "stagger",
+    "where": "h2#longing-title \"خواستنت تمنای هر رگ\"",
+    "msg": "the 2 lines of this heading start at 1089, 955px: a headline broken across columns, read in a zigzag",
+    "fix": "start every row of the list on one left edge",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "stagger"
+    ],
+    "wheres": [
+     "h2#longing-title \"خواستنت تمنای هر رگ\""
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "section#world \"در این جهان بی کران، تنها تویی جهان من\"",
+    "msg": "54% of the section is empty: 80px above its first content, 48px under its last (div.world__visual), 40% beside content that covers under half the container, in its 900px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "section#world \"در این جهان بی کران، تنها تویی جهان من\""
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "section#letter \"چند خط از روزهای با تو\"",
+    "msg": "68% of the section is empty: 288px above its first content, 400px of empty rows between its content, 64px under its last (span.letter__number), 26% beside content that covers under half the container, in its 1800px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "section#letter \"چند خط از روزهای با تو\""
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "footer#ending \"«تو نیم دیگرم که نه، تمام من تو هستی»\"",
+    "msg": "76% of the section is empty: 96px above its first content, 112px of empty rows between its content, 48px under its last (span.closing__mark), 49% beside content that covers under half the container, in its 900px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "footer#ending \"«تو نیم دیگرم که نه، تمام من تو هستی»\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\"",
+    "msg": "headings of two sections show whole on one screen at 11 of 109 scroll positions (10.1%; at scroll 1200, 1250, 1300, 1350px), here with \"اکنون\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "a.skip-link \"رفتن به متن نامه\"",
+    "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "a.skip-link \"رفتن به متن نامه\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "footer#ending > div.wrap.closing__inner \"مهیا جانم «تو نیم دیگرم که نه، تمام من ت\"",
+    "msg": "footer.closing > .wrap holds 4 children: exactly two (the call, then the legal row) (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "footer#ending > div.wrap.closing__inner \"مهیا جانم «تو نیم دیگرم که نه، تمام من ت\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > span.letter__number \"۲ از ۲\"",
+    "msg": "2 text blocks start on a left line at x 1333, 1253px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"۱ از ۲\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > span.letter__number \"۲ از ۲\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "footer#ending > div.wrap.closing__inner > p.eyebrow \"مهیا جانم\"",
+    "msg": "1 text block starts on a left line at x 1263, 1183px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "footer#ending > div.wrap.closing__inner > p.eyebrow \"مهیا جانم\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "footer#ending > div.wrap.closing__inner > p.closing__note \"برای تو؛ با تمام قلبم.\"",
+    "msg": "1 text block starts on a left line at x 1201, 1121px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (and 23 more like it: x 1089, x 986, x 955) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "footer#ending > div.wrap.closing__inner > p.closing__note \"برای تو؛ با تمام قلبم.\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second \"ادامهٔ نامه نگاه‌کردن به چشم‌های هیچ آدم\"",
+    "msg": "the two columns of the split start 216px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second \"ادامهٔ نامه نگاه‌کردن به چشم‌های هیچ آدم\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--first \"چند خط از روزهای با تو روزهایی که با هم \"",
+    "msg": "the two columns of the split start 74px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--first \"چند خط از روزهای با تو روزهایی که با هم \""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 715, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\""
+    ]
+   },
+   {
+    "check": "nav-covers",
+    "where": "div.music-dock \"مکث موسیقی\"",
+    "msg": "sits on top of the text \"روزهایی که با هم گذشت، به‌طرز عجیبی قشنگ\" while the page scrolls: part of the line shows beside it",
+    "fix": "make the fixed nav one opaque band across the whole screen, or let it scroll away with the page",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav-covers"
+    ],
+    "wheres": [
+     "div.music-dock \"مکث موسیقی\""
+    ]
+   },
+   {
+    "check": "stagger",
+    "where": "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > div.letter__copy \"نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روح\"",
+    "msg": "3 rows start at 3 different left offsets (+0, +5, +18px)",
+    "fix": "start every row of the list on one left edge",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "stagger"
+    ],
+    "wheres": [
+     "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > div.letter__copy \"نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روح\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#longing / footer#ending",
+    "msg": "249px between these sections, +95% against the median 128px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#longing / footer#ending"
+    ]
+   },
+   {
+    "check": "hole",
+    "where": "section#lyrics \"چند خط از آهنگ\"",
+    "msg": "an empty hole 208x400px inside the section (47% of the screen's height), with content above and below it",
+    "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "hole"
+    ],
+    "wheres": [
+     "section#lyrics \"چند خط از آهنگ\""
+    ]
+   },
+   {
+    "check": "hole",
+    "where": "section#longing \"خواستنت تمنای هر رگ\"",
+    "msg": "an empty hole 216x296px inside the section (35% of the screen's height), with content above and below it",
+    "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "hole"
+    ],
+    "wheres": [
+     "section#longing \"خواستنت تمنای هر رگ\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#opening p.eyebrow \"برای مهیا\"",
+    "msg": "starts at x 558.6; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#opening p.eyebrow \"برای مهیا\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#opening h1 \"«وایسته شد تمام من به تمام تو»\"",
+    "msg": "starts at x 226.3; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#opening h1 \"«وایسته شد تمام من به تمام تو»\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#opening p.hero__lead \"بعد از این‌همه دوری، این صفحه بر\"",
+    "msg": "starts at x 107.8; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#opening p.hero__lead \"بعد از این‌همه دوری، این صفحه بر\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#opening div.hero-visual \"منتو بعدِ تمام فاصله‌ها نزدیکِ ت\"",
+    "msg": "starts at x 715.2; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#opening div.hero-visual \"منتو بعدِ تمام فاصله‌ها نزدیکِ ت\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#lyrics p.mo-wh__text \"عمری به هر کوی و گذر گشتم که پید\"",
+    "msg": "starts at x 288; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#lyrics p.mo-wh__text \"عمری به هر کوی و گذر گشتم که پید\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#world h2 \"در این جهان بی کران، تنها تویی ج\"",
+    "msg": "starts at x 304; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#world h2 \"در این جهان بی کران، تنها تویی ج\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "header.letter__heading h2 \"چند خط از روزهای با تو\"",
+    "msg": "starts at x 374.3; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "header.letter__heading h2 \"چند خط از روزهای با تو\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#letter p \"روزهایی که با هم گذشت، به‌طرز عج\"",
+    "msg": "starts at x 894.1; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#letter p \"روزهایی که با هم گذشت، به‌طرز عج\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#letter p \"با اینکه چند باری تهران رو گشته \"",
+    "msg": "starts at x 894.1; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#letter p \"با اینکه چند باری تهران رو گشته \""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#letter p \"نگاه‌کردن به چشم‌های هیچ آدمی، ق\"",
+    "msg": "starts at x 894.1; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#letter p \"نگاه‌کردن به چشم‌های هیچ آدمی، ق\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#letter p \"با تو کباب خوشمزه‌تر شد. زیتون‌پ\"",
+    "msg": "starts at x 894.1; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#letter p \"با تو کباب خوشمزه‌تر شد. زیتون‌پ\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#letter p \"امیدوارم آدم مناسب هم باشیم تا آ\"",
+    "msg": "starts at x 894.1; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#letter p \"امیدوارم آدم مناسب هم باشیم تا آ\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#ending h2 \"«تو نیم دیگرم که نه، تمام من تو \"",
+    "msg": "starts at x 400; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#ending h2 \"«تو نیم دیگرم که نه، تمام من تو \""
+    ]
+   },
+   {
+    "check": "lines",
+    "where": "page",
+    "msg": "headings and leads start on 5 lines (x 226.3, 107.8, 304, 374.3, 80); the page has 80 and one split line",
+    "fix": "put the block on the .wrap lines or the grid columns",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "lines"
+    ],
+    "wheres": [
+     "page"
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "no-visual",
+    "where": "section#world \"در این جهان بی کران، تنها تویی جهان من\"",
+    "msg": "pictures, effects and mocks cover 25% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#letter \"چند خط از روزهای با تو\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headline",
+    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "msg": "the h1 has 0 words (2 to 8 read at a glance)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"play music\" does not read word for word the same in the nav or hero and the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "stagger",
+    "where": "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > div.letter__copy \"نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روح\"",
+    "msg": "3 rows start at 2 different left offsets (+0, +28, +1px)",
+    "fix": "start every row of the list on one left edge",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#world / section#letter",
+    "msg": "380px between these sections, +27% against the median 299px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#letter / section#longing",
+    "msg": "176px between these sections, -41% against the median 299px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section#longing \"خواستنت تمنای هر رگ\"",
+    "msg": "47% of the section is empty: 64px above its first content, 128px of empty rows between its content, 64px under its last (div.longing__visual), 19% beside content that covers under half the container, in its 900px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "a.skip-link \"رفتن به متن نامه\"",
+    "msg": "the first Tab stop is \"رفتن به متن نامه\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#world / section#letter",
+    "msg": "528px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+    "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "off-grid",
+    "where": "h2#world-title > span \"در این جهان بی کران،\"",
+    "msg": "left edge at 36px, 12px off the page margin at 24px (3 elements, none of them near it)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "off-grid",
+    "where": "h2#letter-title \"چند خط از روزهای با تو\"",
+    "msg": "left edge at 46px, 22px off the page margin at 24px (3 elements, none of them near it); 4 more in this section off the grid too (p:nth-of-type(1) at 36px, p:nth-of-type(2) at 28px, p:nth-of-type(1) at 35px, p:nth-of-type(2) at 39.5px)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "off-grid",
+    "where": "h2#longing-title \"خواستنت تمنای هر رگ\"",
+    "msg": "the section's heading starts at 210px, 186px off the page margin (24px), and no other section starts there",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section#world \"در این جهان بی کران، تنها تویی جهان من\"",
+    "msg": "42% of the section is empty: 64px above its first content, 272px of empty rows between its content, 16px under its last (div.world__visual), in its 844px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section#letter \"چند خط از روزهای با تو\"",
+    "msg": "41% of the section is empty: 64px above its first content, 496px of empty rows between its content, 16px under its last (span.letter__number), 7% beside content that covers under half the container, in its 1688px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 87,
+   "layout": 13
+  }
+ },
+ "open": [
+  {
+   "check": "nav",
+   "where": "(the first screen)",
+   "msg": "no nav bar across the top of the first screen (a header with the brand, the section links and the main action)",
+   "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav"
+   ],
+   "wheres": [
+    "(the first screen)"
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#letter \"چند خط از روزهای با تو\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#letter \"چند خط از روزهای با تو\""
+   ]
+  },
+  {
+   "check": "cta",
+   "where": "section#opening",
+   "msg": "the hero has no button (the nav's does not count)",
+   "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cta"
+   ],
+   "wheres": [
+    "section#opening"
+   ]
+  },
+  {
+   "check": "cta",
+   "where": "section#longing \"خواستنت تمنای هر رگ\"",
+   "msg": "the last section before the footer ends with no button",
+   "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cta"
+   ],
+   "wheres": [
+    "section#longing \"خواستنت تمنای هر رگ\""
+   ]
+  },
+  {
+   "check": "copy-headline",
+   "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+   "msg": "\"«وایسته شد تمام من به تمام تو»\" does not name what is sold (persian digital love letter, persian, digital, love, from flags)",
+   "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headline"
+   ],
+   "wheres": [
+    "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+   ]
+  },
+  {
+   "check": "copy-fact",
+   "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+   "msg": "the first screen holds no number, price, date, place, platform or genre",
+   "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-fact"
+   ],
+   "wheres": [
+    "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+   ]
+  },
+  {
+   "check": "stagger",
+   "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+   "msg": "3 rows start at 3 different left offsets (+0, +42, +140px)",
+   "fix": "start every row of the list on one left edge",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "stagger"
+   ],
+   "wheres": [
+    "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+   ]
+  },
+  {
+   "check": "stagger",
+   "where": "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\"",
+   "msg": "the 2 lines of this heading start at 789, 732px: a headline broken across columns, read in a zigzag",
+   "fix": "start every row of the list on one left edge",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "stagger"
+   ],
+   "wheres": [
+    "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\""
+   ]
+  },
+  {
+   "check": "stagger",
+   "where": "h2#longing-title \"خواستنت تمنای هر رگ\"",
+   "msg": "the 2 lines of this heading start at 1089, 955px: a headline broken across columns, read in a zigzag",
+   "fix": "start every row of the list on one left edge",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "stagger"
+   ],
+   "wheres": [
+    "h2#longing-title \"خواستنت تمنای هر رگ\""
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "section#world \"در این جهان بی کران، تنها تویی جهان من\"",
+   "msg": "54% of the section is empty: 80px above its first content, 48px under its last (div.world__visual), 40% beside content that covers under half the container, in its 900px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "section#world \"در این جهان بی کران، تنها تویی جهان من\""
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "section#letter \"چند خط از روزهای با تو\"",
+   "msg": "68% of the section is empty: 288px above its first content, 400px of empty rows between its content, 64px under its last (span.letter__number), 26% beside content that covers under half the container, in its 1800px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "section#letter \"چند خط از روزهای با تو\""
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "footer#ending \"«تو نیم دیگرم که نه، تمام من تو هستی»\"",
+   "msg": "76% of the section is empty: 96px above its first content, 112px of empty rows between its content, 48px under its last (span.closing__mark), 49% beside content that covers under half the container, in its 900px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "footer#ending \"«تو نیم دیگرم که نه، تمام من تو هستی»\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\"",
+   "msg": "headings of two sections show whole on one screen at 11 of 109 scroll positions (10.1%; at scroll 1200, 1250, 1300, 1350px), here with \"اکنون\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "h2#world-title \"در این جهان بی کران، تنها تویی جهان من\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "a.skip-link \"رفتن به متن نامه\"",
+   "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "a.skip-link \"رفتن به متن نامه\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "footer#ending > div.wrap.closing__inner \"مهیا جانم «تو نیم دیگرم که نه، تمام من ت\"",
+   "msg": "footer.closing > .wrap holds 4 children: exactly two (the call, then the legal row) (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "footer#ending > div.wrap.closing__inner \"مهیا جانم «تو نیم دیگرم که نه، تمام من ت\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > span.letter__number \"۲ از ۲\"",
+   "msg": "2 text blocks start on a left line at x 1333, 1253px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"۱ از ۲\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > span.letter__number \"۲ از ۲\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "footer#ending > div.wrap.closing__inner > p.eyebrow \"مهیا جانم\"",
+   "msg": "1 text block starts on a left line at x 1263, 1183px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "footer#ending > div.wrap.closing__inner > p.eyebrow \"مهیا جانم\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "footer#ending > div.wrap.closing__inner > p.closing__note \"برای تو؛ با تمام قلبم.\"",
+   "msg": "1 text block starts on a left line at x 1201, 1121px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (and 23 more like it: x 1089, x 986, x 955) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "footer#ending > div.wrap.closing__inner > p.closing__note \"برای تو؛ با تمام قلبم.\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second \"ادامهٔ نامه نگاه‌کردن به چشم‌های هیچ آدم\"",
+   "msg": "the two columns of the split start 216px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second \"ادامهٔ نامه نگاه‌کردن به چشم‌های هیچ آدم\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--first \"چند خط از روزهای با تو روزهایی که با هم \"",
+   "msg": "the two columns of the split start 74px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#letter > div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--first \"چند خط از روزهای با تو روزهایی که با هم \""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 715, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\""
+   ]
+  },
+  {
+   "check": "nav-covers",
+   "where": "div.music-dock \"مکث موسیقی\"",
+   "msg": "sits on top of the text \"روزهایی که با هم گذشت، به‌طرز عجیبی قشنگ\" while the page scrolls: part of the line shows beside it",
+   "fix": "make the fixed nav one opaque band across the whole screen, or let it scroll away with the page",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav-covers"
+   ],
+   "wheres": [
+    "div.music-dock \"مکث موسیقی\""
+   ]
+  },
+  {
+   "check": "stagger",
+   "where": "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > div.letter__copy \"نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روح\"",
+   "msg": "3 rows start at 3 different left offsets (+0, +5, +18px)",
+   "fix": "start every row of the list on one left edge",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "stagger"
+   ],
+   "wheres": [
+    "div.wrap.letter__wrap > article.letter__article > div.letter__page.letter__page--second > div.letter__copy \"نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روح\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#longing / footer#ending",
+   "msg": "249px between these sections, +95% against the median 128px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#longing / footer#ending"
+   ]
+  },
+  {
+   "check": "hole",
+   "where": "section#lyrics \"چند خط از آهنگ\"",
+   "msg": "an empty hole 208x400px inside the section (47% of the screen's height), with content above and below it",
+   "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "hole"
+   ],
+   "wheres": [
+    "section#lyrics \"چند خط از آهنگ\""
+   ]
+  },
+  {
+   "check": "hole",
+   "where": "section#longing \"خواستنت تمنای هر رگ\"",
+   "msg": "an empty hole 216x296px inside the section (35% of the screen's height), with content above and below it",
+   "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "hole"
+   ],
+   "wheres": [
+    "section#longing \"خواستنت تمنای هر رگ\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#opening p.eyebrow \"برای مهیا\"",
+   "msg": "starts at x 558.6; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#opening p.eyebrow \"برای مهیا\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#opening h1 \"«وایسته شد تمام من به تمام تو»\"",
+   "msg": "starts at x 226.3; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#opening h1 \"«وایسته شد تمام من به تمام تو»\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#opening p.hero__lead \"بعد از این‌همه دوری، این صفحه بر\"",
+   "msg": "starts at x 107.8; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#opening p.hero__lead \"بعد از این‌همه دوری، این صفحه بر\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#opening div.hero-visual \"منتو بعدِ تمام فاصله‌ها نزدیکِ ت\"",
+   "msg": "starts at x 715.2; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#opening div.hero-visual \"منتو بعدِ تمام فاصله‌ها نزدیکِ ت\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#lyrics p.mo-wh__text \"عمری به هر کوی و گذر گشتم که پید\"",
+   "msg": "starts at x 288; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#lyrics p.mo-wh__text \"عمری به هر کوی و گذر گشتم که پید\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#world h2 \"در این جهان بی کران، تنها تویی ج\"",
+   "msg": "starts at x 304; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#world h2 \"در این جهان بی کران، تنها تویی ج\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "header.letter__heading h2 \"چند خط از روزهای با تو\"",
+   "msg": "starts at x 374.3; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "header.letter__heading h2 \"چند خط از روزهای با تو\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#letter p \"روزهایی که با هم گذشت، به‌طرز عج\"",
+   "msg": "starts at x 894.1; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#letter p \"روزهایی که با هم گذشت، به‌طرز عج\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#letter p \"با اینکه چند باری تهران رو گشته \"",
+   "msg": "starts at x 894.1; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#letter p \"با اینکه چند باری تهران رو گشته \""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#letter p \"نگاه‌کردن به چشم‌های هیچ آدمی، ق\"",
+   "msg": "starts at x 894.1; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#letter p \"نگاه‌کردن به چشم‌های هیچ آدمی، ق\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#letter p \"با تو کباب خوشمزه‌تر شد. زیتون‌پ\"",
+   "msg": "starts at x 894.1; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#letter p \"با تو کباب خوشمزه‌تر شد. زیتون‌پ\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#letter p \"امیدوارم آدم مناسب هم باشیم تا آ\"",
+   "msg": "starts at x 894.1; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#letter p \"امیدوارم آدم مناسب هم باشیم تا آ\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#ending h2 \"«تو نیم دیگرم که نه، تمام من تو \"",
+   "msg": "starts at x 400; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#ending h2 \"«تو نیم دیگرم که نه، تمام من تو \""
+   ]
+  },
+  {
+   "check": "lines",
+   "where": "page",
+   "msg": "headings and leads start on 5 lines (x 226.3, 107.8, 304, 374.3, 80); the page has 80 and one split line",
+   "fix": "put the block on the .wrap lines or the grid columns",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "lines"
+   ],
+   "wheres": [
+    "page"
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 15,
+ "at": "2026-11-20T18:19:05.770Z",
+ "openTold": true
+}
