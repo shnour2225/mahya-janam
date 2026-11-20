@@ -15,6 +15,7 @@ export default defineConfig({
       input: {
         index: resolve(process.cwd(), 'index.html'),
         'mahya-janam': resolve(process.cwd(), 'mahya-janam.html'),
+        'seconds-until-seeing-you': resolve(process.cwd(), 'seconds-until-seeing-you/index.html'),
       },
     },
   },

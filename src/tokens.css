@@ -1,0 +1,28 @@
+:root {
+  --bg: #f8f0ea;
+  --surface: #edccbe;
+  --paper: #fffaf6;
+  --ink: #351a2b;
+  --muted: #765d67;
+  --accent: #a54e63;
+  --rose: #c98291;
+  --action: #351a2b;
+  --action-ink: #fffaf6;
+  --line: rgb(53 26 43 / 0.14);
+  --line-strong: rgb(53 26 43 / 0.3);
+  --font-display: "Vazirmatn Variable", Vazirmatn, Tahoma, sans-serif;
+  --font-text: "Vazirmatn Variable", Vazirmatn, Tahoma, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.055em;
+  --t-h2: clamp(2.6rem, 6vw, 4.5rem);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --s-2: 0.5rem;
+  --r-sm: 0.625rem;
+  --r-md: 1rem;
+  --r-lg: 1.5rem;
+  --r-btn: 999px;
+  --gut: clamp(1.5rem, 5.55vw, 5rem);
+  color-scheme: light;
+  font-synthesis: none;
+}

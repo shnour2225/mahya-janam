@@ -1,16 +1,31 @@
 import '@fontsource-variable/vazirmatn';
 import './style.css';
 
-const audio = document.querySelector<HTMLAudioElement>('#background-music');
-const dock = document.querySelector<HTMLElement>('[data-music-dock]');
-const toggle = document.querySelector<HTMLButtonElement>('[data-music-toggle]');
-const heroToggle = document.querySelector<HTMLButtonElement>('[data-hero-music]');
-const label = document.querySelector<HTMLElement>('[data-music-label]');
-const status = document.querySelector<HTMLElement>('[data-music-status]');
-const progress = document.querySelector<HTMLElement>('[data-track-progress]');
-const currentTime = document.querySelector<HTMLElement>('[data-current-time]');
-const duration = document.querySelector<HTMLElement>('[data-duration]');
-const hero = document.querySelector<HTMLElement>('#opening');
+declare global {
+  interface Window {
+    MAHYA_CONFIG?: {
+      enableMahyaJanamPage?: boolean;
+    };
+  }
+}
+
+const mahyaJanamPageEnabled = window.MAHYA_CONFIG?.enableMahyaJanamPage !== false;
+
+if (!mahyaJanamPageEnabled) {
+  document.documentElement.dataset.mahyaPage = 'disabled';
+  document.body.replaceChildren();
+}
+
+const audio = mahyaJanamPageEnabled ? document.querySelector<HTMLAudioElement>('#background-music') : null;
+const dock = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('[data-music-dock]') : null;
+const toggle = mahyaJanamPageEnabled ? document.querySelector<HTMLButtonElement>('[data-music-toggle]') : null;
+const heroToggle = mahyaJanamPageEnabled ? document.querySelector<HTMLButtonElement>('[data-hero-music]') : null;
+const label = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('[data-music-label]') : null;
+const status = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('[data-music-status]') : null;
+const progress = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('[data-track-progress]') : null;
+const currentTime = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('[data-current-time]') : null;
+const duration = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('[data-duration]') : null;
+const hero = mahyaJanamPageEnabled ? document.querySelector<HTMLElement>('#opening') : null;
 
 const toPersianDigits = (value: string) => value.replace(/\d/g, (digit) => '۰۱۲۳۴۵۶۷۸۹'[Number(digit)]);
 

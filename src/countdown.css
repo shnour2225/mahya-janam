@@ -1,0 +1,269 @@
+@import './tokens.css';
+
+@font-face {
+  font-family: "Vazirmatn Countdown";
+  src: url("../font/Vazirmatn/static/Vazirmatn-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+html {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+body {
+  min-width: 20rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Vazirmatn Countdown", Tahoma, sans-serif;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--rose);
+  color: var(--ink);
+}
+
+.countdown-page {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100svh;
+  min-height: 32rem;
+  overflow: hidden;
+  place-items: center;
+  padding:
+    max(1.5rem, env(safe-area-inset-top))
+    max(1.5rem, env(safe-area-inset-right))
+    max(1.5rem, env(safe-area-inset-bottom))
+    max(1.5rem, env(safe-area-inset-left));
+  isolation: isolate;
+}
+
+.countdown-page::before,
+.countdown-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgb(255 250 246 / 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.countdown-page::before {
+  width: min(86vw, 42rem);
+  aspect-ratio: 1;
+  inset: auto auto -36vw -28vw;
+}
+
+.countdown-page::after {
+  width: min(48vw, 23rem);
+  aspect-ratio: 1;
+  inset: auto auto -17vw -9vw;
+}
+
+.countdown-shell {
+  display: grid;
+  width: min(100%, 62rem);
+  height: min(100%, 49rem);
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(2rem, 6vh, 4rem);
+}
+
+.countdown-heading {
+  max-width: 42rem;
+}
+
+.countdown-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgb(255 250 246 / 0.68);
+}
+
+.countdown-kicker::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.countdown-heading h1 {
+  margin: 1.25rem 0 0;
+  font-family: "Vazirmatn Countdown", Tahoma, sans-serif;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: var(--display-tracking-xl);
+  text-wrap: balance;
+}
+
+.countdown-heading > p:last-child {
+  max-width: 38rem;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.9;
+  color: rgb(255 250 246 / 0.72);
+}
+
+.countdown {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  min-height: clamp(9.5rem, 24vh, 13rem);
+  border-block: 1px solid rgb(255 250 246 / 0.18);
+}
+
+.time-unit {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-inline: 0.5rem;
+}
+
+.time-unit + .time-unit {
+  border-inline-start: 1px solid rgb(255 250 246 / 0.12);
+}
+
+.time-unit strong {
+  direction: ltr;
+  font-family: "Vazirmatn Countdown", Tahoma, sans-serif;
+  font-size: clamp(2.65rem, 8vw, 6.2rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.time-unit span {
+  font-size: clamp(0.75rem, 1.4vw, 0.9rem);
+  font-weight: 700;
+  color: rgb(255 250 246 / 0.58);
+}
+
+.countdown-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+}
+
+.countdown-footer p {
+  max-width: 38rem;
+  margin: 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.9;
+  color: rgb(255 250 246 / 0.78);
+}
+
+.countdown-footer time {
+  flex: none;
+  font-size: 0.8125rem;
+  color: rgb(255 250 246 / 0.5);
+  white-space: nowrap;
+}
+
+@media (max-width: 639px) {
+  .countdown-page {
+    place-items: stretch;
+  }
+
+  .countdown-shell {
+    height: 100%;
+    gap: clamp(1.5rem, 4.8vh, 2.5rem);
+  }
+
+  .countdown-heading h1 {
+    margin-top: 1rem;
+    font-size: clamp(2.7rem, 12.5vw, 3.45rem);
+  }
+
+  .countdown-heading > p:last-child {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .countdown {
+    min-height: 9.25rem;
+  }
+
+  .time-unit {
+    padding-inline: 0.25rem;
+  }
+
+  .time-unit strong {
+    font-size: clamp(2.35rem, 11.5vw, 3.1rem);
+  }
+
+  .countdown-footer {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .countdown-footer p {
+    font-size: 0.925rem;
+    line-height: 1.75;
+  }
+
+  .countdown-footer time {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-height: 680px) {
+  .countdown-page {
+    padding-block: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .countdown-shell {
+    gap: 1rem;
+  }
+
+  .countdown-heading h1 {
+    font-size: 2.35rem;
+  }
+
+  .countdown-heading > p:last-child {
+    margin-top: 0.625rem;
+    line-height: 1.55;
+  }
+
+  .countdown {
+    min-height: 7.5rem;
+  }
+
+  .time-unit strong {
+    font-size: 2.15rem;
+  }
+
+  .countdown-footer p {
+    line-height: 1.55;
+  }
+}

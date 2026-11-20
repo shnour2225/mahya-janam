@@ -3,6 +3,8 @@ import { join } from 'node:path';
 
 const pagePath = join('dist', 'mahya-janam.html');
 const page = readFileSync(pagePath, 'utf8');
+const countdownPage = readFileSync(join('dist', 'seconds-until-seeing-you', 'index.html'), 'utf8');
+const siteConfig = readFileSync(join('dist', 'site-config.js'), 'utf8');
 const audioPath = join('dist', 'audio', 'Arman Garshasbi - Benshin Tamashayat Konam (320).mp3');
 const sharePath = join('dist', 'share.jpg');
 
@@ -31,7 +33,9 @@ if (wordCount < 110 || wordCount > 130) {
 
 if ((page.match(/<audio\b/g) ?? []).length !== 1) throw new Error('صفحه باید دقیقاً یک عنصر audio داشته باشد.');
 if (!page.includes('%28320%29.mp3')) throw new Error('نشانی فایل موسیقی باید پرانتزها را به‌صورت امن کدگذاری کند.');
+if (!siteConfig.includes('enableMahyaJanamPage')) throw new Error('تنظیم نمایش صفحهٔ اصلی پیدا نشد.');
+if (!countdownPage.includes('2026-11-24T12:05:00+03:30')) throw new Error('زمان دیدار در صفحهٔ شمارش معکوس درست نیست.');
 if (statSync(audioPath).size < 9_000_000) throw new Error('فایل موسیقی در خروجی ناقص است.');
 if (statSync(sharePath).size < 20_000) throw new Error('تصویر اشتراک‌گذاری صفحه در خروجی ناقص است.');
 
-console.log(`verify: موسیقی، تصویر اشتراک‌گذاری، متن‌های الزامی و نامهٔ ${wordCount} واژه‌ای درست‌اند.`);
+console.log(`verify: دو صفحه، تنظیم نمایش، موسیقی، تصویر اشتراک‌گذاری و نامهٔ ${wordCount} واژه‌ای درست‌اند.`);
