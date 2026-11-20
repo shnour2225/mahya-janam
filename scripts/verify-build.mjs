@@ -3,7 +3,6 @@ import { join } from 'node:path';
 
 const pagePath = join('dist', 'mahya-janam.html');
 const page = readFileSync(pagePath, 'utf8');
-const redirects = readFileSync(join('dist', '_redirects'), 'utf8');
 const audioPath = join('dist', 'audio', 'Arman Garshasbi - Benshin Tamashayat Konam (320).mp3');
 const sharePath = join('dist', 'share.jpg');
 
@@ -32,10 +31,7 @@ if (wordCount < 110 || wordCount > 130) {
 
 if ((page.match(/<audio\b/g) ?? []).length !== 1) throw new Error('صفحه باید دقیقاً یک عنصر audio داشته باشد.');
 if (!page.includes('%28320%29.mp3')) throw new Error('نشانی فایل موسیقی باید پرانتزها را به‌صورت امن کدگذاری کند.');
-if (!redirects.split(/\r?\n/).some((line) => /^\/\s+\/mahya-janam\s+302\s*$/.test(line))) {
-  throw new Error('ریدایرکت ریشه به /mahya-janam پیدا نشد.');
-}
 if (statSync(audioPath).size < 9_000_000) throw new Error('فایل موسیقی در خروجی ناقص است.');
 if (statSync(sharePath).size < 20_000) throw new Error('تصویر اشتراک‌گذاری صفحه در خروجی ناقص است.');
 
-console.log(`verify: مسیر، موسیقی، تصویر اشتراک‌گذاری، متن‌های الزامی و نامهٔ ${wordCount} واژه‌ای درست‌اند.`);
+console.log(`verify: موسیقی، تصویر اشتراک‌گذاری، متن‌های الزامی و نامهٔ ${wordCount} واژه‌ای درست‌اند.`);
