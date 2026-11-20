@@ -124,8 +124,8 @@
    },
    {
     "check": "copy-headline",
-    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
-    "msg": "\"«وایسته شد تمام من به تمام تو»\" does not name what is sold (persian digital love letter, persian, digital, love, from flags)",
+    "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
+    "msg": "\"«وابسته شد تمام من به تمام تو»\" does not name what is sold (persian digital love letter, persian, digital, love, from flags)",
     "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
     "widths": [
      1440
@@ -135,12 +135,12 @@
      "copy-headline"
     ],
     "wheres": [
-     "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+     "h1#hero-title \"«وابسته شد تمام من به تمام تو»\""
     ]
    },
    {
     "check": "copy-fact",
-    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
     "msg": "the first screen holds no number, price, date, place, platform or genre",
     "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim",
     "widths": [
@@ -151,12 +151,12 @@
      "copy-fact"
     ],
     "wheres": [
-     "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+     "h1#hero-title \"«وابسته شد تمام من به تمام تو»\""
     ]
    },
    {
     "check": "stagger",
-    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
     "msg": "3 rows start at 3 different left offsets (+0, +42, +140px)",
     "fix": "start every row of the list on one left edge",
     "widths": [
@@ -168,7 +168,7 @@
      "stagger"
     ],
     "wheres": [
-     "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+     "h1#hero-title \"«وابسته شد تمام من به تمام تو»\""
     ]
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "check": "split-pair",
-    "where": "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\"",
+    "where": "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وابسته شد تمام من به تمام تو»\"",
     "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 715, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
     "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
     "widths": [
@@ -393,7 +393,7 @@
      "split-pair"
     ],
     "wheres": [
-     "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\""
+     "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وابسته شد تمام من به تمام تو»\""
     ]
    },
    {
@@ -495,7 +495,7 @@
    },
    {
     "check": "edge-left",
-    "where": "#opening h1 \"«وایسته شد تمام من به تمام تو»\"",
+    "where": "#opening h1 \"«وابسته شد تمام من به تمام تو»\"",
     "msg": "starts at x 226.3; the lines are 80 and the column starts",
     "fix": "start it on the .wrap left line",
     "widths": [
@@ -507,7 +507,7 @@
      "edge-left"
     ],
     "wheres": [
-     "#opening h1 \"«وایسته شد تمام من به تمام تو»\""
+     "#opening h1 \"«وابسته شد تمام من به تمام تو»\""
     ]
    },
    {
@@ -729,7 +729,7 @@
    },
    {
     "check": "copy-headline",
-    "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+    "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
     "msg": "the h1 has 0 words (2 to 8 read at a glance)",
     "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
     "widths": [
@@ -937,8 +937,8 @@
   },
   {
    "check": "copy-headline",
-   "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
-   "msg": "\"«وایسته شد تمام من به تمام تو»\" does not name what is sold (persian digital love letter, persian, digital, love, from flags)",
+   "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
+   "msg": "\"«وابسته شد تمام من به تمام تو»\" does not name what is sold (persian digital love letter, persian, digital, love, from flags)",
    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
    "widths": [
     1440
@@ -948,12 +948,12 @@
     "copy-headline"
    ],
    "wheres": [
-    "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+    "h1#hero-title \"«وابسته شد تمام من به تمام تو»\""
    ]
   },
   {
    "check": "copy-fact",
-   "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+   "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
    "msg": "the first screen holds no number, price, date, place, platform or genre",
    "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim",
    "widths": [
@@ -964,12 +964,12 @@
     "copy-fact"
    ],
    "wheres": [
-    "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+    "h1#hero-title \"«وابسته شد تمام من به تمام تو»\""
    ]
   },
   {
    "check": "stagger",
-   "where": "h1#hero-title \"«وایسته شد تمام من به تمام تو»\"",
+   "where": "h1#hero-title \"«وابسته شد تمام من به تمام تو»\"",
    "msg": "3 rows start at 3 different left offsets (+0, +42, +140px)",
    "fix": "start every row of the list on one left edge",
    "widths": [
@@ -981,7 +981,7 @@
     "stagger"
    ],
    "wheres": [
-    "h1#hero-title \"«وایسته شد تمام من به تمام تو»\""
+    "h1#hero-title \"«وابسته شد تمام من به تمام تو»\""
    ]
   },
   {
@@ -1195,7 +1195,7 @@
   },
   {
    "check": "split-pair",
-   "where": "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\"",
+   "where": "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وابسته شد تمام من به تمام تو»\"",
    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 715, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
    "widths": [
@@ -1206,7 +1206,7 @@
     "split-pair"
    ],
    "wheres": [
-    "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وایسته شد تمام من به تمام تو»\""
+    "section#opening > div.wrap > div.hero-text.hero__grid \"برای مهیا «وابسته شد تمام من به تمام تو»\""
    ]
   },
   {
@@ -1308,7 +1308,7 @@
   },
   {
    "check": "edge-left",
-   "where": "#opening h1 \"«وایسته شد تمام من به تمام تو»\"",
+   "where": "#opening h1 \"«وابسته شد تمام من به تمام تو»\"",
    "msg": "starts at x 226.3; the lines are 80 and the column starts",
    "fix": "start it on the .wrap left line",
    "widths": [
@@ -1320,7 +1320,7 @@
     "edge-left"
    ],
    "wheres": [
-    "#opening h1 \"«وایسته شد تمام من به تمام تو»\""
+    "#opening h1 \"«وابسته شد تمام من به تمام تو»\""
    ]
   },
   {

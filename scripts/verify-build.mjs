@@ -8,7 +8,7 @@ const audioPath = join('dist', 'audio', 'Arman Garshasbi - Benshin Tamashayat Ko
 const sharePath = join('dist', 'share.jpg');
 
 const required = [
-  'وایسته شد',
+  'وابسته شد',
   'عمری به هر کوی و گذر گشتم که پیدایت کنم',
   'اکنون که پیدا کرده ام بنشین تماشایت کنم',
   'در این جهان بی کران،',
