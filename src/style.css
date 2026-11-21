@@ -1,5 +1,13 @@
 @import './tokens.css';
 
+@font-face {
+  font-family: "Vazirmatn Local Bold";
+  src: url("../font/Vazirmatn/static/Vazirmatn-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -393,7 +401,30 @@ a {
   color: var(--ink);
 }
 
+.lyrics::before,
+.lyrics::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(255 250 246 / 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.lyrics::before {
+  width: min(36rem, 72vw);
+  aspect-ratio: 1;
+  inset: auto auto -24% -18%;
+}
+
+.lyrics::after {
+  width: min(22rem, 44vw);
+  aspect-ratio: 1;
+  inset: auto auto -8% -5%;
+}
+
 .lyrics__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -401,10 +432,11 @@ a {
 }
 
 .lyrics .mo-wh__text {
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
   max-width: 67rem;
   margin: 0;
   font-size: clamp(2.55rem, 5.5vw, 5rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.55;
   letter-spacing: -0.035em;
 }
@@ -441,14 +473,15 @@ a {
   flex-direction: column;
   margin: 0;
   font-size: var(--t-h2);
-  font-weight: 400;
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-weight: 700;
   line-height: 1.14;
   letter-spacing: -0.055em;
 }
 
 .world h2 strong {
   margin-inline-start: clamp(0rem, 8vw, 8rem);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .world__visual {
@@ -479,12 +512,24 @@ a {
   inset: 29%;
 }
 
-.world__visual span {
+.world__texture {
   position: relative;
   z-index: 1;
-  font-size: clamp(4rem, 10vw, 8rem);
-  font-weight: 400;
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  font-weight: 700;
   letter-spacing: -0.06em;
+  color: rgb(53 26 43 / 0.1);
+}
+
+.world__core {
+  position: absolute;
+  z-index: 2;
+  width: clamp(0.75rem, 1.5vw, 1.25rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 clamp(0.5rem, 1vw, 0.875rem) rgb(165 78 99 / 0.12);
 }
 
 .letter {
@@ -509,10 +554,12 @@ a {
 }
 
 .letter__page--second {
-  grid-template-areas: "copy continuation";
+  grid-template-areas: "copy pull";
 }
 
 .letter__heading {
+  position: relative;
+  z-index: 1;
   grid-area: heading;
 }
 
@@ -520,19 +567,25 @@ a {
   max-width: 10ch;
   margin: 0;
   font-size: var(--t-h2);
-  font-weight: 400;
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.045em;
 }
 
-.letter__continuation {
-  grid-area: continuation;
+.letter__pull {
+  grid-area: pull;
   margin: 0;
-  font-size: clamp(1.75rem, 3vw, 2.75rem);
-  line-height: 1.3;
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
 }
 
 .letter__copy {
+  position: relative;
+  z-index: 1;
   grid-area: copy;
   max-width: 42rem;
   font-size: clamp(1.2rem, 1.72vw, 1.5rem);
@@ -547,14 +600,23 @@ a {
   margin-top: 1.5rem;
 }
 
-.letter__number {
+.letter__texture {
   position: absolute;
-  inset-inline-start: 0;
-  inset-block-end: clamp(3.5rem, 8.9vh, 5rem);
-  font-size: 0.875rem;
-  font-weight: 500;
+  left: 0;
+  inset-block-end: clamp(2rem, 5vh, 3.5rem);
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-size: clamp(7rem, 17vw, 13rem);
+  font-weight: 700;
   line-height: 1;
-  color: var(--muted);
+  letter-spacing: -0.07em;
+  color: rgb(53 26 43 / 0.055);
+  pointer-events: none;
+}
+
+.letter__texture--eyes {
+  right: 0;
+  left: auto;
+  font-size: clamp(6rem, 14vw, 11rem);
 }
 
 .longing {
@@ -565,8 +627,9 @@ a {
   display: flex;
   flex-direction: column;
   margin: 0;
-  font-size: var(--t-h2);
-  font-weight: 400;
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-size: clamp(4.5rem, 9vw, 8rem);
+  font-weight: 700;
   line-height: 1.02;
   letter-spacing: -0.06em;
 }
@@ -574,7 +637,7 @@ a {
 .longing h2 strong {
   margin-inline-start: clamp(1rem, 10vw, 9rem);
   font-size: 0.76em;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -582,9 +645,10 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   min-height: clamp(15rem, 42vh, 23rem);
+  flex: 1;
   align-items: center;
   gap: clamp(1.5rem, 4vw, 4rem);
-  margin-top: auto;
+  margin-top: clamp(2rem, 5vh, 3.5rem);
 }
 
 .longing__paths {
@@ -610,14 +674,34 @@ a {
   width: 52%;
 }
 
-.longing__visual > span {
-  display: grid;
+.longing__point {
+  position: relative;
+  display: block;
   width: clamp(8rem, 18vw, 15rem);
   aspect-ratio: 1;
-  place-items: center;
   border: 1px solid var(--line-strong);
   border-radius: 50%;
-  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.longing__point::before,
+.longing__point::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.longing__point::before {
+  width: 42%;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+}
+
+.longing__point::after {
+  width: 0.75rem;
+  aspect-ratio: 1;
+  background: var(--accent);
 }
 
 .closing {
@@ -625,20 +709,43 @@ a {
   --ink: #fffaf6;
   background: var(--bg);
   color: var(--ink);
+  isolation: isolate;
+}
+
+.closing::after {
+  content: "تمام";
+  position: absolute;
+  inset: 48% auto auto 50%;
+  color: rgb(255 250 246 / 0.035);
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-size: clamp(10rem, 28vw, 24rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: -1;
+}
+
+.closing__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .closing h2 {
   max-width: 60rem;
   margin: clamp(2rem, 6vh, 3.5rem) 0 0;
   font-size: var(--t-h2);
-  font-weight: 400;
+  font-family: "Vazirmatn Local Bold", Tahoma, sans-serif;
+  font-weight: 700;
   line-height: 1.27;
   letter-spacing: -0.05em;
   text-wrap: balance;
 }
 
 .closing__note {
-  margin: auto 0 0;
+  margin: clamp(1.5rem, 4vh, 2.5rem) 0 0;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   color: rgb(255 250 246 / 0.68);
 }
@@ -723,7 +830,7 @@ a {
   }
 
   .letter__page--second {
-    grid-template-areas: "continuation" "copy";
+    grid-template-areas: "pull" "copy";
   }
 
   .letter__heading h2 {
@@ -733,7 +840,7 @@ a {
 
   .letter__copy {
     max-width: 36rem;
-    align-self: center;
+    align-self: start;
   }
 }
 
@@ -814,12 +921,20 @@ a {
   }
 
   .lyrics .mo-wh__text {
-    font-size: clamp(2rem, 9.4vw, 2.45rem);
-    line-height: 1.75;
+    font-size: clamp(2.3rem, 10.5vw, 2.9rem);
+    line-height: 1.62;
   }
 
   .lyrics .mo-wh__text > span + span {
     margin-top: 1.25rem;
+  }
+
+  .lyrics__inner {
+    justify-content: center;
+  }
+
+  .lyrics__credit {
+    margin: 2.5rem 0 0;
   }
 
   .world h2 {
@@ -837,48 +952,55 @@ a {
     width: min(68vw, 16.5rem);
   }
 
-  .world__visual span {
-    font-size: 4.25rem;
+  .world__texture {
+    font-size: 5rem;
   }
 
   .letter__page {
-    gap: 1.5rem;
+    gap: 1.25rem;
+    padding-block: 4rem max(2.5rem, calc(env(safe-area-inset-bottom) + 1.5rem));
   }
 
   .letter__heading h2 {
     margin-top: 0;
-    font-size: var(--t-h2);
-    line-height: 1.2;
+    font-size: clamp(3rem, 13vw, 3.75rem);
+    line-height: 1.12;
   }
 
-  .letter__continuation {
-    font-size: 1.6rem;
+  .letter__pull {
+    font-size: clamp(2.8rem, 12vw, 3.6rem);
+    line-height: 1.14;
   }
 
   .letter__copy {
-    font-size: clamp(1.08rem, 4.65vw, 1.16rem);
-    line-height: 2.02;
+    font-size: clamp(1.08rem, 4.7vw, 1.18rem);
+    line-height: 1.9;
   }
 
   .letter__copy p + p {
     margin-top: 1rem;
   }
 
-  .letter__number {
-    inset-block-end: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
-    font-size: 0.8125rem;
+  .letter__texture {
+    inset-block-end: max(2.5rem, calc(env(safe-area-inset-bottom) + 1.5rem));
+    font-size: 7rem;
+  }
+
+  .letter__texture--eyes {
+    font-size: 4.8rem;
   }
 
   .longing h2 {
     margin-top: 0;
-    font-size: var(--t-h2);
-    line-height: 1.08;
+    font-size: clamp(4.35rem, 20vw, 5.5rem);
+    line-height: 0.98;
   }
 
   .longing h2 strong {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     margin-inline-start: 0;
-    font-size: 0.76em;
+    font-size: 0.62em;
+    line-height: 1.2;
   }
 
   .longing__visual {
@@ -886,15 +1008,14 @@ a {
     gap: 1rem;
   }
 
-  .longing__visual > span {
+  .longing__point {
     width: 7.5rem;
-    font-size: 3rem;
   }
 
   .closing h2 {
     margin-top: 2rem;
-    font-size: var(--t-h2);
-    line-height: 1.4;
+    font-size: clamp(3.15rem, 14vw, 4rem);
+    line-height: 1.3;
   }
 
   .closing__mark {
@@ -930,9 +1051,12 @@ a {
   .lyrics__inner,
   .world__inner,
   .longing__inner,
-  .closing__inner,
-  .letter__page {
+  .closing__inner {
     padding-block: 4.75rem 2.5rem;
+  }
+
+  .letter__page {
+    padding-block: 3rem 2rem;
   }
 }
 
