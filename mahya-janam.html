@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- type: service (closest taste-skill profile for a personal editorial page)
-     deal: split hero, nav-split omitted by brief, close-type + footer-dark merged into ending,
-     dark-band rhythm, tonal controls, initial mark, word-highlight moment -->
+     deal: split photo hero, nav omitted by brief, photo-led closing dedication,
+     dark-band rhythm, tonal controls, word-highlight moment -->
 <html lang="fa" dir="rtl" data-type="service" data-radius="soft" data-buttons="tonal" data-motion>
   <head>
     <meta charset="UTF-8">
@@ -59,7 +59,12 @@
       </button>
     </div>
 
-    <main>
+    <main class="story">
+      <svg class="story-trail" viewBox="0 0 100 700" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path class="story-trail__wide" vector-effect="non-scaling-stroke" d="M51 -4C51 20 46 30 49 48S56 78 51 104 20 129 18 155 71 179 71 208 48 239 48 265 76 294 72 326 36 352 40 385 69 416 63 448 24 480 28 508 56 536 55 567 46 594 57 625 82 655 76 704"/>
+        <path class="story-trail__narrow" vector-effect="non-scaling-stroke" d="M7 -4C13 18 3 27 3 47S9 78 8 105 3 128 3 151 20 169 17 189 3 214 4 242 15 273 8 299 3 333 6 364 22 392 16 415 2 449 4 474 13 504 8 535 3 550 3 581 24 605 22 625 5 652 6 674 9 689 8 704"/>
+      </svg>
+
       <section class="hero" id="opening" data-enter aria-labelledby="hero-title">
         <div class="wrap">
           <div class="hero-text hero__grid">
@@ -72,31 +77,24 @@
               </h1>
               <div class="hero__closing">
                 <p class="hero__lead">بعد از این‌همه دوری، این صفحه برای همان لحظه‌ای‌ست که کنار توام.</p>
-                <button class="hero__music btn btn--primary" type="button" aria-controls="background-music" aria-pressed="false" data-hero-music>پخش آهنگ</button>
+                <div class="hero__sound">
+                  <button class="hero__music btn btn--primary" type="button" aria-controls="background-music" aria-pressed="false" data-hero-music>پخش آهنگ</button>
+                  <div class="track" aria-hidden="true">
+                    <div class="track__heading">بنشین تماشایت کنم</div>
+                    <div class="track__time">
+                      <span data-current-time>۰:۰۰</span>
+                      <span class="track__bar"><i data-track-progress></i></span>
+                      <span data-duration>—:——</span>
+                    </div>
+                  </div>
+                </div>
                 <span class="sr-only" role="status" aria-live="polite" data-music-status></span>
               </div>
             </div>
 
-            <div class="hero-visual" data-enter-media data-visual role="img" aria-label="فاصلهٔ میان من و تو که به نزدیکی می‌رسد، همراه با آهنگ بنشین تماشایت کنم">
-              <div class="distance" aria-hidden="true">
-                <span>من</span><i></i><span>تو</span>
-              </div>
-              <div class="hero-visual__statement">
-                <span>بعدِ تمام فاصله‌ها</span>
-                <strong>نزدیکِ تو</strong>
-              </div>
-              <div class="track" aria-hidden="true">
-                <div class="track__heading">
-                  <span>بنشین تماشایت کنم</span>
-                  <small>آرمان گرشاسبی</small>
-                </div>
-                <div class="track__time">
-                  <span data-current-time>۰:۰۰</span>
-                  <span class="track__bar"><i data-track-progress></i></span>
-                  <span data-duration>—:——</span>
-                </div>
-              </div>
-            </div>
+            <figure class="photo-frame hero__photo" data-enter-media data-visual>
+              <img src="/we/2.jpg" alt="عکس ویژه‌ای از من و مهیا کنار هم" decoding="async" fetchpriority="high" data-source="client" data-subject="عکس مشترک">
+            </figure>
           </div>
         </div>
       </section>
@@ -104,11 +102,21 @@
       <section class="section lyrics" id="lyrics" data-moment="word-highlight" aria-labelledby="lyrics-title">
         <div class="wrap lyrics__inner">
           <h2 class="sr-only" id="lyrics-title">چند خط از آهنگ</h2>
-          <p class="mo-wh__text">
-            <span>عمری به هر کوی و گذر گشتم که پیدایت کنم</span>
-            <span>اکنون که پیدا کرده ام بنشین تماشایت کنم</span>
-          </p>
-          <p class="lyrics__credit">بنشین تماشایت کنم · آرمان گرشاسبی</p>
+          <div class="lyrics__verse">
+            <p class="mo-wh__text">
+              <span>عمری به هر کوی و گذر گشتم که پیدایت کنم</span>
+              <span>اکنون که پیدا کرده ام بنشین تماشایت کنم</span>
+            </p>
+            <p class="lyrics__credit">بنشین تماشایت کنم · آرمان گرشاسبی</p>
+          </div>
+          <div class="photo-pair lyrics__photos">
+            <figure class="photo-frame photo-frame--lean-right" data-visual>
+              <img src="/we/1.jpg" alt="عکس شمارهٔ یک از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
+            <figure class="photo-frame photo-frame--lean-left" data-visual>
+              <img src="/we/3.jpg" alt="عکس شمارهٔ سه از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -118,35 +126,45 @@
             <span>در این جهان بی کران،</span>
             <strong>تنها تویی جهان من</strong>
           </h2>
-          <div class="world__visual" data-visual role="img" aria-label="جهانی که همهٔ راه‌هایش به یک مرکز می‌رسند">
-            <span class="world__texture" aria-hidden="true">جهان</span>
-            <i class="world__core" aria-hidden="true"></i>
+          <div class="photo-pair world__photos">
+            <figure class="photo-frame" data-visual>
+              <img src="/we/4.jpg" alt="عکس شمارهٔ چهار از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
+            <figure class="photo-frame" data-visual>
+              <img src="/we/5.jpg" alt="عکس شمارهٔ پنج از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
           </div>
         </div>
       </section>
 
       <section class="section letter" id="letter" aria-labelledby="letter-title">
-        <div class="wrap letter__wrap">
-          <article class="letter__article" data-visual aria-label="نامهٔ دو صفحه‌ای برای مهیا">
-            <div class="letter__page letter__page--first">
-              <header class="letter__heading">
+        <div class="wrap">
+          <article class="letter__article">
+            <div class="letter__spread">
+              <div class="letter__text">
                 <h2 id="letter-title">چند خط از روزهای با تو</h2>
-              </header>
-              <div class="letter__copy" data-personal-message>
-                <p>روزهایی که با هم گذشت، به‌طرز عجیبی قشنگ بود. بعد از این همه دوری، کنار تو فهمیدم دلتنگی چطور یک‌باره جاش رو به آرامش و ذوق می‌ده.</p>
-                <p>با اینکه چند باری تهران رو گشته بودم، هیچ‌وقت این‌قدر جذاب و دیدنی نبود. خیابون‌گردی و آهنگ گوش‌کردن هیچ‌وقت این‌قدر مفرح نبود.</p>
+                <div class="letter__copy" data-personal-message>
+                  <p>روزهایی که با هم گذشت، به‌طرز عجیبی قشنگ بود. بعد از این همه دوری، کنار تو فهمیدم دلتنگی چطور یک‌باره جاش رو به آرامش و ذوق می‌ده.</p>
+                  <p>با اینکه چند باری تهران رو گشته بودم، هیچ‌وقت این‌قدر جذاب و دیدنی نبود. خیابون‌گردی و آهنگ گوش‌کردن هیچ‌وقت این‌قدر مفرح نبود.</p>
+                </div>
               </div>
-              <span class="letter__texture" aria-hidden="true">تهران</span>
+              <figure class="photo-frame photo-frame--lean-left" data-visual>
+                <img src="/we/6.jpg" alt="عکس شمارهٔ شش از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+              </figure>
             </div>
 
-            <div class="letter__page letter__page--second">
-              <p class="letter__pull" aria-hidden="true">خودِ زندگی<br>قشنگ‌تر شد</p>
-              <div class="letter__copy" data-personal-message>
-                <p>نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روحم رو به وجد نیاورد؛ چشم‌های تو اما این‌چنین کرد.</p>
-                <p>با تو کباب خوشمزه‌تر شد. زیتون‌پرورده‌ها دلچسب‌تر شد. هات‌چاکلت‌ها گواراتر شدند و از همه مهم‌تر، خود زندگی قشنگ‌تر شد.</p>
-                <p>امیدوارم آدم مناسب هم باشیم تا آخرش و از جانب هم، قلبامون رنج نبینه. تمام قلبم رو سپردم بهت. چشم‌های قشنگت در امان خدا. اول مواظب خودت و بعد، من باش.</p>
+            <div class="letter__spread">
+              <div class="letter__text">
+                <p class="letter__pull" aria-hidden="true">خودِ زندگی<br>قشنگ‌تر شد</p>
+                <div class="letter__copy" data-personal-message>
+                  <p>نگاه‌کردن به چشم‌های هیچ آدمی، قلب و روحم رو به وجد نیاورد؛ چشم‌های تو اما این‌چنین کرد.</p>
+                  <p>با تو کباب خوشمزه‌تر شد. زیتون‌پرورده‌ها دلچسب‌تر شد. هات‌چاکلت‌ها گواراتر شدند و از همه مهم‌تر، خود زندگی قشنگ‌تر شد.</p>
+                  <p>امیدوارم آدم مناسب هم باشیم تا آخرش و از جانب هم، قلبامون رنج نبینه. تمام قلبم رو سپردم بهت. چشم‌های قشنگت در امان خدا. اول مواظب خودت و بعد، من باش.</p>
+                </div>
               </div>
-              <span class="letter__texture letter__texture--eyes" aria-hidden="true">چشم‌هات</span>
+              <figure class="photo-frame" data-visual>
+                <img src="/we/7.jpg" alt="عکس شمارهٔ هفت از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+              </figure>
             </div>
           </article>
         </div>
@@ -158,22 +176,31 @@
             <span>خواستنت</span>
             <strong>تمنای هر رگ</strong>
           </h2>
-          <div class="longing__visual" data-visual role="img" aria-label="همهٔ راه‌ها به تو می‌رسند">
-            <div class="longing__paths" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <i class="longing__point" aria-hidden="true"></i>
+          <div class="photo-trio">
+            <figure class="photo-frame" data-visual>
+              <img src="/we/8.jpg" alt="عکس شمارهٔ هشت از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
+            <figure class="photo-frame photo-frame--lean-right" data-visual>
+              <img src="/we/9.jpg" alt="عکس شمارهٔ نه از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
+            <figure class="photo-frame" data-visual>
+              <img src="/we/10.jpg" alt="عکس شمارهٔ ده از من و مهیا" loading="lazy" decoding="async" data-source="client" data-subject="عکس مشترک">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section closing" id="ending" aria-labelledby="ending-title">
+        <img class="closing__photo" src="/we/11.jpg" alt="عکس ویژهٔ پایانی از من و مهیا" loading="lazy" decoding="async" data-visual data-source="client" data-subject="عکس مشترک">
+        <div class="wrap closing__inner">
+          <div class="closing__dedication">
+            <p class="eyebrow">مهیا جانم</p>
+            <h2 id="ending-title">«تو نیم دیگرم که نه، تمام من تو هستی»</h2>
+            <p class="closing__note">برای تو؛ با تمام قلبم.</p>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="closing" id="ending" aria-labelledby="ending-title">
-      <div class="wrap closing__inner">
-        <p class="eyebrow">مهیا جانم</p>
-        <h2 id="ending-title">«تو نیم دیگرم که نه، تمام من تو هستی»</h2>
-        <p class="closing__note">برای تو؛ با تمام قلبم.</p>
-        <span class="closing__mark" data-visual role="img" aria-label="حرف نخست نام مهیا">م</span>
-      </div>
-    </footer>
 
     <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/assets/motion/motion.js"></script>
