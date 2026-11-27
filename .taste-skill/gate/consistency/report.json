@@ -261,7 +261,7 @@
      "check": "container-edges",
      "sev": "FAIL",
      "sel": "footer#ending > div.wrap.closing__inner",
-     "text": "مهیا جانم «تو نیم دیگرم که نه، تمام من ت",
+     "text": "محیا جانم «تو نیم دیگرم که نه، تمام من ت",
      "msg": "footer.closing > .wrap holds 4 children: exactly two (the call, then the legal row) (SR-6)",
      "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
      "rule": "SR-6 T1-structure",
@@ -280,7 +280,7 @@
      "check": "container-edges",
      "sev": "FAIL",
      "sel": "footer#ending > div.wrap.closing__inner > p.eyebrow",
-     "text": "مهیا جانم",
+     "text": "محیا جانم",
      "msg": "1 text block starts on a left line at x 1263, 1183px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
      "fix": "start the text on the container's left, or on the one split line every split shares",
      "rule": "SR-6 T3-left-lines"
@@ -335,7 +335,7 @@
      "check": "split-pair",
      "sev": "FAIL",
      "sel": "section#opening > div.wrap > div.hero-text.hero__grid",
-     "text": "برای مهیا «وابسته شد تمام من به تمام تو»",
+     "text": "برای محیا «وابسته شد تمام من به تمام تو»",
      "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 715, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
      "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
      "rule": "SR-8 T-pair"
