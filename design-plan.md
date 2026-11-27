@@ -5,6 +5,8 @@ Voice: intimate colloquial Persian; exact and personal, never promotional. Keep 
 
 ## Screen plan
 
+The locked route opens on a single warm-cream screen with an illustrated sealed envelope and a four-digit code field. The letter is inert until opened. The code is Tehran time (UTC+03:30) in `MMHH` order: `18:57` gives `5718` until `18:58` begins. This is a visual gate, not private hosting. The countdown page is separate.
+
 1. `opening` — the dedication and compact song control beside the large `we/2.jpg`. One screen where it fits. The hero enters once.
 2. `lyrics` — the two supplied lyric lines on burgundy beside `we/1.jpg` and `we/3.jpg`. The word-highlight moment stays on the lyrics only.
 3. `world` — «در این جهان بی کران، تنها تویی جهان من» above an asymmetric pair, `we/4.jpg` and `we/5.jpg`.

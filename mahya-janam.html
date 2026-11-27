@@ -6,16 +6,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>مهیا جانم؛ یک نامه برای تمام تو</title>
-    <meta name="description" content="یک نامهٔ عاشقانهٔ فارسی برای مهیا؛ از دوری، دیدار و همهٔ چیزهای کوچکی که کنار او زیباتر شدند.">
+    <title>یه نامه برای مهیا</title>
+    <meta name="description" content="برای باز کردن نامه، رمز چهاررقمی رو وارد کن.">
+    <meta name="robots" content="noindex">
     <meta name="site-kind" content="other">
     <meta name="page-type" content="service">
     <meta name="theme-color" content="#f8f0ea">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="مهیا جانم؛ یک نامه برای تمام تو">
-    <meta property="og:description" content="برای همان لحظه‌ای که تمام فاصله‌ها تمام می‌شوند و کنار توام.">
-    <meta property="og:image" content="./share.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="یه نامه برای مهیا">
+    <meta property="og:description" content="برای باز کردن نامه، رمز چهاررقمی رو وارد کن.">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <script src="/site-config.js"></script>
@@ -27,13 +26,40 @@
     <style>html[data-mahya-page="disabled"] body { display: none !important; }</style>
 
     <link rel="stylesheet" href="/assets/motion/motion.css">
-    <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
-    <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-    <link rel="modulepreload" href="/assets/moments/moments.js">
-    <link rel="modulepreload" href="/assets/moments/lib.js">
-    <link rel="modulepreload" href="/assets/moments/word-highlight/moment.js">
   </head>
   <body>
+    <main id="letter-gate" aria-labelledby="gate-title">
+      <section class="letter-gate">
+        <div class="wrap">
+          <div class="hero-text gate__layout">
+            <div class="gate__copy">
+              <h1 id="gate-title">یه نامه برای تو</h1>
+              <p class="gate__lead" id="gate-help">رمز ۴ رقمی رو بزن تا نامه باز بشه.</p>
+
+              <form id="letter-gate-form" class="gate__form" novalidate>
+                <label for="letter-code">رمز نامه</label>
+                <input id="letter-code" type="password" inputmode="numeric" maxlength="4" autocomplete="off" dir="ltr" aria-describedby="gate-help gate-feedback" required>
+                <button class="gate__submit btn btn--primary" type="submit" disabled>نامه رو باز کن</button>
+              </form>
+              <p id="gate-feedback" class="gate__feedback" role="status"></p>
+              <noscript><p>برای باز کردن نامه، جاوااسکریپت رو روشن کن.</p></noscript>
+            </div>
+
+            <div class="gate__paper" data-visual aria-hidden="true">
+              <svg viewBox="0 0 360 250" focusable="false">
+                <path class="gate__thread" d="M-5 184C56 198 44 119 91 118C127 118 138 181 179 179C235 177 249 55 365 68"/>
+                <rect class="gate__envelope" x="66" y="56" width="228" height="144" rx="5"/>
+                <path class="gate__fold" d="m68 198 80-73m144 73-80-73M68 58l112 97L292 58"/>
+                <circle class="gate__seal" cx="180" cy="154" r="18"/>
+                <circle class="gate__seal-ring" cx="180" cy="154" r="12"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template id="letter-content">
     <a class="skip-link" href="#opening">رفتن به متن نامه</a>
 
     <audio
@@ -70,7 +96,7 @@
           <div class="hero-text hero__grid">
             <div class="hero__copy">
               <p class="eyebrow">برای مهیا</p>
-              <h1 id="hero-title" aria-label="وابسته شد تمام من به تمام تو">
+              <h1 id="hero-title" tabindex="-1" aria-label="وابسته شد تمام من به تمام تو">
                 <span>«وابسته شد</span>
                 <span>تمام من به</span>
                 <span>تمام تو»</span>
@@ -201,9 +227,8 @@
         </div>
       </section>
     </main>
+    </template>
 
     <script type="module" src="/src/main.ts"></script>
-    <script type="module" src="/assets/motion/motion.js"></script>
-    <script type="module" src="/assets/moments/moments.js"></script>
   </body>
 </html>

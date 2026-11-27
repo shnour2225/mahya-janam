@@ -91,6 +91,11 @@ a {
   outline-offset: 3px;
 }
 
+/* Announce the heading on unlock without outlining it like a control. */
+#hero-title[tabindex="-1"]:focus-visible {
+  outline: none;
+}
+
 .story {
   --chapter-space: clamp(3rem, 7.6vw, 7rem);
   --story-gap: clamp(1.75rem, 4vw, 4rem);

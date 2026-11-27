@@ -2,3 +2,4 @@
 window.MAHYA_CONFIG = Object.freeze({
   enableMahyaJanamPage: true,
 });
+  
